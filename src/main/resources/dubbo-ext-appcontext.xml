@@ -11,6 +11,14 @@
  http://www.springframework.org/schema/context/spring-context.xsd
  http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
   	
+  	<!-- 加入cat 监控 -->
   	<dubbo:provider filter="DubboCatFilter" />
+  	
+  	<!-- lazy init -->
+  	<dubbo:protocol name="dubbo" lazy="true" />
+  	<!-- 超时时间 5000 ms -->
+  	<dubbo:service timeout="5000" />
+  	<!-- 不重试 -->
+  	<dubbo:service retries=0 />
  
 </beans>
