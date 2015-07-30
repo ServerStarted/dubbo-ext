@@ -20,7 +20,9 @@
   	<dubbo:consumer check="false" />
   	<!-- 超时时间 5000 ms -->
   	<dubbo:provider timeout="5000" />
+  	<dubbo:consumer timeout="5000" />
   	<!-- 不重试 -->
   	<dubbo:provider retries="0" />
+  	<dubbo:consumer retries="0" />
  
 </beans>
